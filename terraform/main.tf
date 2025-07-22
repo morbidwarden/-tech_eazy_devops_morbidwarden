@@ -2,7 +2,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 5.0"
+      version = "~> 4"
     }
   }
 }
@@ -60,7 +60,7 @@ resource "aws_instance" "PublicInstance" {
   associate_public_ip_address = true
   vpc_security_group_ids = [aws_security_group.allow_ssh_http.id]
   key_name = "keypair"
-  user_data              = file("/scripts/user_data.sh")
+  user_data              = file("../scripts/user_data.sh")
   tags = {
     Name = "public instance 01"
   }

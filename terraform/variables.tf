@@ -11,5 +11,5 @@ variable "availability_zone" {
   default = "ap-south-1b"
 }
 variable "instance_type" {
-  default = "t2.micro"
+  default = "t3.micro"
 }
