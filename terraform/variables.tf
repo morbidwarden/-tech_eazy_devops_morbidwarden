@@ -13,3 +13,12 @@ variable "availability_zone" {
 variable "instance_type" {
   default = "t3.micro"
 }
+variable "bucket_name" {
+  description = "The name of the S3 bucket to store logs"
+  type        = string
+
+  validation {
+    condition     = length(var.bucket_name) > 3
+    error_message = "Bucket name must be at least 4 characters long."
+  }
+}
