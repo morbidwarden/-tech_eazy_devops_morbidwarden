@@ -95,3 +95,6 @@ resource "aws_security_group" "allow_ssh_http" {
     Name = "Allow SSH & HTTP"
   }
 }
+
+## s3 configuration
+
